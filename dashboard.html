@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="brand-wrap">
+                <img src="logo.png" alt="selfless logo">
+                <h1>Jinja Tech Centre</h1>
+            </div>
+
+            <div class="notification-bell" aria-label="Notifications">
+                <span class="notification-count">3</span>
+            </div>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="tutor.html">Tutors</a></li>
+                <li><a href="adim.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-page">
+        <aside class="sidebar">
+            <section class="profile-part">
+                <div class="profile-image">
+                    <img width="150" height="150" src="images/profile.jpg" alt="Profile Image">
+                </div>
+                <p class="profile-name">Yakan Frank</p>
+                <p class="profile-role">Student</p>
+
+                <ul class="profile-info">
+                    <li><strong>ID:</strong> JTC-2048</li>
+                    <li><strong>Course:</strong> Web Design</li>
+                    <li><strong>Level:</strong> pathway student</li>
+                </ul>
+
+                <div class="profile-extra" id="profileExtra">
+                    <p><strong>School:</strong> BYU</p>
+                    <p><strong>Phone:</strong> +256 700 123 456</p>
+                    <p><strong>Email:</strong> yakan.frank@example.com</p>
+                    <p><strong>Location:</strong> Jinja, Uganda</p>
+                    <p><strong>Age:</strong> 29</p>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>GPA:</strong> 3.8</p>
+                    <p><strong>NIN:</strong> 123456789</p>
+                    <p><strong>Religion:</strong> Christian</p>
+                    <p><strong>Nationality:</strong> Ugandan</p>
+                    <p><strong>Bio:</strong> Passionate about web development and technology. Always eager to learn and contribute to innovative projects.</p>
+                </div>
+
+                <button class="show-more-btn" id="toggleProfile" type="button" aria-expanded="false">Show more</button>
+            </section>
+
+            <section class="notification-panel">
+                <div class="panel-title">
+                    <h3>Notifications</h3>
+                    <span>3 new</span>
+                </div>
+                <ul>
+                    <li><span class="dot blue"></span> Payment reminder due tomorrow</li>
+                    <li><span class="dot green"></span> Tutor assigned for your block</li>
+                    <li><span class="dot orange"></span> Saturday workshop is confirmed</li>
+                </ul>
+            </section>
+        </aside>
+
+        <div class="content-area">
+            <section class="page-header">
+                <div>
+                    <p class="eyebrow">Cohort overview</p>
+                    <h2>Dashboard</h2>
+                </div>
+                <button class="primary-btn" type="button">View schedule</button>
+            </section>
+
+            <section class="dashboard-grid">
+                <article class="panel status-card">
+                    <p class="label">Current block</p>
+                    <h3>Block 06</h3>
+                    <p>Ends in 12 days</p>
+                    <ul>
+                        <li>Next registration opens on 15 Oct</li>
+                        <li>Next payment due on 18 Oct</li>
+                        <li>Block announcements updated weekly</li>
+                    </ul>
+                </article>
+
+                <article class="panel quick-card">
+                    <p class="label">Quick updates</p>
+                    <h3>Announcements</h3>
+                    <p>Community clean-up on Saturday at 9:00 AM.</p>
+                    <p>Student check-in reminder for all lab sessions.</p>
+                </article>
+
+                <article class="panel quick-card">
+                    <p class="label">Support</p>
+                    <h3>On duty tutor</h3>
+                    <p>Jane Muwanga is assigned for this week.</p>
+                    <p>Open office hours: Tue &amp; Thu, 4:00 PM.</p>
+                </article>
+            </section>
+
+            <section class="info-grid">
+                <article class="panel">
+                    <p class="label">Students</p>
+                    <h3>Attendance list</h3>
+                    <ul>
+                        <li>Samuel</li>
+                        <li>Grace</li>
+                        <li>Joseph</li>
+                        <li>Mary</li>
+                    </ul>
+                </article>
+
+                <article class="panel">
+                    <p class="label">Roles</p>
+                    <h3>Weekly chores</h3>
+                    <ul>
+                        <li>Cleaning team: Samuel &amp; Grace</li>
+                        <li>Water station: Joseph</li>
+                        <li>Class setup: Mary</li>
+                    </ul>
+                </article>
+
+                <article class="panel">
+                    <p class="label">Tutors</p>
+                    <h3>Assigned this week</h3>
+                    <ul>
+                        <li>Jane Muwanga</li>
+                        <li>Peter Kato</li>
+                        <li>Sarah Nakitto</li>
+                    </ul>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const toggleButton = document.getElementById('toggleProfile');
+        const profileExtra = document.getElementById('profileExtra');
+
+        if (toggleButton && profileExtra) {
+            toggleButton.addEventListener('click', () => {
+                const isOpen = profileExtra.classList.toggle('open');
+                toggleButton.textContent = isOpen ? 'Show less' : 'Show more';
+                toggleButton.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
+    </script>
+</body>
+</html>

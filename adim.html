@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Jinja Tech Centre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+    <div class="admin-shell">
+        <aside class="admin-sidebar">
+            <div class="brand-block">
+                <div class="brand-logo">J</div>
+                <div>
+                    <h2>Jinja Tech</h2>
+                    <p>Admin Board</p>
+                </div>
+            </div>
+
+            <nav class="side-nav">
+                <a class="active" href="adim.html">Overview</a>
+                <a href="students.html">Students</a>
+                <a href="tutor.html">Tutors</a>
+                <a href="events.html">Reports</a>
+                <a href="contact.html">Settings</a>
+            </nav>
+
+            <div class="admin-profile">
+                <div class="mini-avatar">MF</div>
+                <div>
+                    <h3>Frank M.</h3>
+                    <p>Operations Manager</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <div>
+                    <p class="top-label">Welcome back</p>
+                    <h1>Good evening, manager Frank</h1>
+                </div>
+
+                <div class="top-actions">
+                    <div class="search-box">Search...</div>
+                    <button class="primary-btn small-btn">+ Add session</button>
+                </div>
+            </header>
+
+            <section class="stat-grid">
+                <article class="stat-card blue">
+                    <p>Total students</p>
+                    <h3>1,248</h3>
+                    <span>+12% this month</span>
+                </article>
+                <article class="stat-card green">
+                    <p>Academic mentors</p>
+                    <h3>24</h3>
+                    <span>6 scheduled today</span>
+                </article>
+                <article class="stat-card orange">
+                    <p>Pending tasks</p>
+                    <h3>18</h3>
+                    <span>4 urgent</span>
+                </article>
+                <article class="stat-card purple">
+                    <p>Revenue</p>
+                    <h3>$8.4k</h3>
+                    <span>+18.2% vs last week</span>
+                </article>
+            </section>
+
+            <section class="admin-panel-grid">
+                <article class="admin-panel large-panel">
+                    <div class="panel-head">
+                        <h2>Upcoming mentor sessions</h2>
+                        <a href="tutor.html">View all</a>
+                    </div>
+
+                    <div class="tour-list">
+                        <div class="tour-item">
+                            <div>
+                                <h3>Web Design Lab</h3>
+                                <p>Tue, 9:00 AM · 14 seats left</p>
+                            </div>
+                            <span class="status-pill approved">Confirmed</span>
+                        </div>
+
+                        <div class="tour-item">
+                            <div>
+                                <h3>Data Skills Clinic</h3>
+                                <p>Wed, 10:30 AM · 8 seats left</p>
+                            </div>
+                            <span class="status-pill review">Pending</span>
+                        </div>
+
+                        <div class="tour-item">
+                            <div>
+                                <h3>Career Mentoring</h3>
+                                <p>Fri, 7:30 AM · 22 seats left</p>
+                            </div>
+                            <span class="status-pill approved">Confirmed</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="admin-panel">
+                    <div class="panel-head">
+                        <h2>Quick actions</h2>
+                    </div>
+                    <ul class="task-list">
+                        <li>Review student requests</li>
+                        <li>Confirm lab schedules</li>
+                        <li>Send attendance reminders</li>
+                        <li>Prepare class briefings</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="admin-table-panel admin-panel">
+                <div class="panel-head">
+                    <h2>Recent student visits</h2>
+                    <a href="#">Export</a>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Session</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Joy K.</td>
+                            <td>Web Design Clinic</td>
+                            <td>Oct 04</td>
+                            <td><span class="status-pill approved">Checked in</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sam A.</td>
+                            <td>Data Skills Mentoring</td>
+                            <td>Oct 05</td>
+                            <td><span class="status-pill review">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Claire L.</td>
+                            <td>Career Guidance</td>
+                            <td>Oct 06</td>
+                            <td><span class="status-pill approved">Confirmed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
